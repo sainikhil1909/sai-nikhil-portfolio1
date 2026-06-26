@@ -40,7 +40,7 @@ function Contact() {
     try {
 
       const response = await fetch(
-        "https://sai-nikhil-portfolio.onrender.com/api/contact",
+        "https://sai-nikhil-portfolio1.onrender.com/api/contact",
         {
           method: "POST",
 

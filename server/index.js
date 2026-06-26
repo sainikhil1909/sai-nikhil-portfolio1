@@ -36,7 +36,12 @@ mongoose.connect(
 
 
     });
-
+app.get("/", (req, res) => {
+    res.status(200).json({
+        success: true,
+        message: "Portfolio Backend is Running 🚀"
+    });
+});
 app.use(
     "/api/contact",
     contactRoutes
