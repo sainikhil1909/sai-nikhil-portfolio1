@@ -1,0 +1,489 @@
+
+/* ==========================
+   PROJECTS
+========================== */
+
+.projects {
+
+  background: #0a0a0a;
+
+  padding: 120px 8%;
+
+  overflow: hidden;
+}
+
+/* ==========================
+   HEADER
+========================== */
+
+.projects-header {
+
+  text-align: center;
+
+  max-width: 800px;
+
+  margin: auto;
+
+  margin-bottom: 50px;
+}
+
+.projects-header span {
+
+  color: #ff2a2a;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  letter-spacing: 4px;
+}
+
+.projects-header h2 {
+
+  font-size: clamp(2.5rem, 6vw, 4rem);
+
+  color: white;
+
+  margin: 20px 0;
+
+  font-weight: 900;
+}
+
+.projects-header p {
+
+  color: #a1a1aa;
+
+  line-height: 1.8;
+}
+
+/* ==========================
+   CONTROLS
+========================== */
+
+.slider-controls {
+
+  display: flex;
+
+  justify-content: flex-end;
+
+  gap: 15px;
+
+  margin-bottom: 30px;
+}
+
+.slider-controls button {
+
+  width: 55px;
+
+  height: 55px;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: #ff2a2a;
+
+  color: white;
+
+  cursor: pointer;
+
+  font-size: 18px;
+
+  transition: .3s;
+}
+
+.slider-controls button:hover {
+
+  transform: scale(1.1);
+
+  box-shadow:
+    0 0 25px rgba(255,42,42,.4);
+}
+
+/* ==========================
+   HORIZONTAL SLIDER
+========================== */
+
+.projects-slider {
+
+  display: flex;
+
+  gap: 30px;
+
+  overflow-x: auto;
+
+  scroll-behavior: smooth;
+
+  /* scroll-snap-type: x mandatory; */
+
+  padding-bottom: 20px;
+
+  scrollbar-width: none;
+}
+
+.projects-slider::-webkit-scrollbar {
+
+  display: none;
+}
+
+/* ==========================
+   CARD
+========================== */
+
+ .project-card {
+
+  min-width: 400px;
+
+  max-width: 400px;
+
+  background: rgba(255,255,255,0.05);
+
+  backdrop-filter: blur(15px);
+
+  -webkit-backdrop-filter: blur(15px);
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  border-radius: 25px;
+
+  overflow: hidden;
+
+  flex-shrink: 0;
+
+  position: relative;
+
+  transition: all .5s ease;
+}
+
+ .project-card:hover {
+
+  transform:
+    translateY(-12px)
+    scale(1.02);
+
+  background:
+    rgba(255,255,255,0.08);
+
+  border:
+    1px solid rgba(255,42,42,0.5);
+
+  box-shadow:
+    0 15px 40px rgba(255,42,42,.25),
+    0 0 20px rgba(255,255,255,.08);
+
+  backdrop-filter: blur(25px);
+
+  -webkit-backdrop-filter: blur(25px);
+}
+.project-card::before {
+
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+
+  left: -120%;
+
+  width: 100%;
+
+  height: 100%;
+
+  background:
+    linear-gradient(
+      120deg,
+      transparent,
+      rgba(255,255,255,.15),
+      transparent
+    );
+
+  transition: .8s;
+}
+
+.project-card:hover::before {
+
+  left: 120%;
+}
+/* ==========================
+   IMAGE
+========================== */
+
+.project-image {
+
+  height: 240px;
+
+  overflow: hidden;
+}
+
+.project-image img {
+
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: .5s;
+}
+
+.project-card:hover img {
+
+  transform: scale(1.08);
+}
+
+/* ==========================
+   CONTENT
+========================== */
+
+.project-content {
+
+  padding: 25px;
+}
+
+.project-content h3 {
+
+  color: white;
+
+  margin-bottom: 15px;
+
+  font-size: 1.4rem;
+   transition: .4s;
+}
+
+.project-content p {
+
+  color: #a1a1aa;
+
+  line-height: 1.8;
+
+  margin-bottom: 20px;
+}
+.project-links{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:15px;
+
+    margin-top:20px;
+}
+
+.project-links a,
+.live-demo-btn{
+
+    white-space:nowrap;
+}
+.project-card:last-child{
+
+    margin-right: 100px;
+}
+/* ==========================
+   TECH STACK
+========================== */
+
+.tech-stack {
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 10px;
+
+  margin-bottom: 25px;
+}
+
+.tech-stack span {
+
+  background:
+    rgba(255,255,255,0.06);
+
+  backdrop-filter: blur(10px);
+
+  border:
+    1px solid rgba(255,255,255,.1);
+
+  color: white;
+
+  padding: 8px 14px;
+
+  border-radius: 50px;
+
+  transition: .3s;
+}
+
+.tech-stack span:hover {
+
+  background:
+    rgba(255,42,42,.15);
+
+  border-color:
+    rgba(255,42,42,.4);
+
+  transform: translateY(-2px);
+}
+/* ==========================
+   LINKS
+========================== */
+
+.project-links {
+
+  display: flex;
+
+  justify-content: space-between;
+}
+
+.project-links a {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  color: white;
+
+  transition: .3s;
+}
+
+.project-links a:hover {
+
+  color: #ff2a2a;
+}
+
+.project-links a,
+.project-links .live-demo-btn{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    color:white;
+
+    text-decoration:none;
+
+    transition:.3s;
+}
+
+.project-links a:hover,
+.project-links .live-demo-btn:hover{
+
+    color:#FF2A2A;
+}
+.project-card:hover .project-image img {
+
+  transform:
+    scale(1.08);
+
+  filter:
+    brightness(1.1)
+    saturate(1.15);
+}
+.project-card:hover h3 {
+
+  color: #ff2a2a;
+}
+.live-demo-btn {
+
+  padding: 10px 18px;
+
+  border-radius: 12px;
+
+  background:
+    rgba(255,255,255,.05);
+
+  backdrop-filter: blur(10px);
+
+  border:
+    1px solid rgba(255,255,255,.08);
+
+  transition: .3s;
+}
+
+.live-demo-btn:hover {
+
+  background:
+    rgba(255,42,42,.15);
+
+  border-color:
+    rgba(255,42,42,.5);
+
+  box-shadow:
+    0 0 15px rgba(255,42,42,.25);
+}
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media(max-width:768px){
+
+  .project-card{
+
+    min-width:320px;
+
+    max-width:320px;
+  }
+
+  .project-image{
+
+    height:200px;
+  }
+
+  .slider-controls{
+
+    justify-content:center;
+  }
+
+}
+/* ==========================
+   MOBILE
+========================== */
+
+@media (max-width:768px){
+
+    .projects{
+
+        padding:80px 5%;
+    }
+
+    .projects-slider{
+
+        gap:20px;
+
+        overflow-x:auto;
+
+        scroll-snap-type:x mandatory;
+
+        -webkit-overflow-scrolling:touch;
+
+        padding-bottom:15px;
+    }
+
+    .project-card{
+
+        min-width:100%;
+
+        max-width:100%;
+
+        scroll-snap-align:center;
+
+        flex-shrink:0;
+    }
+
+    .project-image{
+
+        height:220px;
+    }
+
+    .slider-controls{
+
+        justify-content:center;
+
+        margin-bottom:20px;
+    }
+}
