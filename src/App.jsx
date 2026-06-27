@@ -12,12 +12,13 @@ import Resume from "./components/Resume/Resume";
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
 import { useState } from "react";
-import {useEffect} from "react";
+import { useEffect } from "react";
 
 import Preloader from "./components/Preloader/Preloader";
 
 import ComingSoon from "./components/ComingSoon/ComingSoon";
 import ChatBot from "./components/ChatBot/ChatBot";
+import Offline from "./components/Offline/Offline";
 
 function HomePage() {
 
@@ -33,7 +34,7 @@ function HomePage() {
       <Resume />
       <Contact />
       <Footer />
-       <ChatBot />
+      <ChatBot />
     </>
   );
 
@@ -42,62 +43,93 @@ function HomePage() {
 function App() {
 
   const [loading, setLoading] = useState(true);
-//   useEffect(() => {
 
-//   // Disable Right Click
-//   const disableRightClick = (e) => {
-//     e.preventDefault();
-//   };
+  const [online, setOnline] = useState(navigator.onLine);
 
-//   // Disable F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U
-//   const disableKeys = (e) => {
+  useEffect(() => {
 
-//     if (
-//       e.key === "F12" ||
+    const handleOnline = () => {
 
-//       (e.ctrlKey &&
-//        e.shiftKey &&
-//        e.key.toLowerCase() === "i") ||
+      setOnline(true);
 
-//       (e.ctrlKey &&
-//        e.shiftKey &&
-//        e.key.toLowerCase() === "j") ||
+    };
 
-//       (e.ctrlKey &&
-//        e.key.toLowerCase() === "u")
-//     ) {
+    const handleOffline = () => {
 
-//       e.preventDefault();
+      setOnline(false);
 
-//       return false;
-//     }
-//   };
+    };
 
-//   document.addEventListener(
-//     "contextmenu",
-//     disableRightClick
-//   );
+    window.addEventListener("online", handleOnline);
 
-//   document.addEventListener(
-//     "keydown",
-//     disableKeys
-//   );
+    window.addEventListener("offline", handleOffline);
 
-//   return () => {
+    return () => {
 
-//     document.removeEventListener(
-//       "contextmenu",
-//       disableRightClick
-//     );
+      window.removeEventListener("online", handleOnline);
 
-//     document.removeEventListener(
-//       "keydown",
-//       disableKeys
-//     );
+      window.removeEventListener("offline", handleOffline);
 
-//   };
+    };
 
-// }, []);
+  }, []);
+
+  useEffect(() => {
+
+    // Disable Right Click
+    const disableRightClick = (e) => {
+      e.preventDefault();
+    };
+
+    // Disable F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U
+    const disableKeys = (e) => {
+
+      if (
+        e.key === "F12" ||
+
+        (e.ctrlKey &&
+          e.shiftKey &&
+          e.key.toLowerCase() === "i") ||
+
+        (e.ctrlKey &&
+          e.shiftKey &&
+          e.key.toLowerCase() === "j") ||
+
+        (e.ctrlKey &&
+          e.key.toLowerCase() === "u")
+      ) {
+
+        e.preventDefault();
+
+        return false;
+      }
+    };
+
+    document.addEventListener(
+      "contextmenu",
+      disableRightClick
+    );
+
+    document.addEventListener(
+      "keydown",
+      disableKeys
+    );
+
+    return () => {
+
+      document.removeEventListener(
+        "contextmenu",
+        disableRightClick
+      );
+
+      document.removeEventListener(
+        "keydown",
+        disableKeys
+      );
+
+    };
+
+  }, []);
 
   if (loading) {
 
@@ -108,7 +140,25 @@ function App() {
     );
 
   }
-  
+
+  if (!online) {
+
+    return <Offline />;
+
+  }
+
+
+
+  if (loading) {
+
+    return (
+      <Preloader
+        onDone={() => setLoading(false)}
+      />
+    );
+
+  }
+
   return (
 
     <Routes>

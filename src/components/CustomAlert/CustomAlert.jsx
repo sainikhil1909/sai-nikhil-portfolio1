@@ -9,21 +9,16 @@ function CustomAlert({
 
   useEffect(() => {
 
-    if(message){
+    if (!message) return;
 
-      const timer = setTimeout(() => {
-
+    const timer = setTimeout(() => {
         onClose();
+    }, 5000);
 
-      },5000);
+    return () => clearTimeout(timer);
 
-      return () => clearTimeout(timer);
-    }
-
-  },[message,onClose]);
-
-  if(!message) return null;
-
+}, [message, onClose]);
+if (!message) return;
   return (
 
     <div className={`custom-alert ${type}`}>

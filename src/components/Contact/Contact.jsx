@@ -40,7 +40,7 @@ function Contact() {
     try {
 
       const response = await fetch(
-        "https://sai-nikhil-portfolio1.onrender.com/api/contact",
+        `${import.meta.env.VITE_API_URL}/api/contact`,
         {
           method: "POST",
 

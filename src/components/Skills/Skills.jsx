@@ -59,9 +59,9 @@ const skills = [
         title: "Machine Learning",
         items: [
              { name: "Machine Learning", level: 70},
-            { name: "NumPy", level: 80 },
-            {name:"Pandas", level:80},
-            { name: "Scikit-Learn", level: 80 }
+            { name: "NumPy", level: 75 },
+            {name:"Pandas", level:75},
+            { name: "Scikit-Learn", level: 60 }
         ]
     },
 
