@@ -174,6 +174,12 @@ function Projects() {
                                 alt={project.title}
                             />
 
+                            <div className="image-watermark">
+                                <span className="wm-sn">SN</span>
+                                <span className="wm-line"></span>
+                                <span className="wm-name">Sai Nikhil</span>
+                            </div>
+
                         </div>
 
                         <div className="project-content">
