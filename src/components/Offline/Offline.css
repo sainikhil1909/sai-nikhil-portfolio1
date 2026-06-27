@@ -44,6 +44,31 @@
     color:#FF2A2A;
 
     margin-bottom:20px;
+
+    animation:float 2s ease-in-out infinite;
+
+}
+
+@keyframes float{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-10px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
 }
 
 .offline-card h1{
@@ -88,4 +113,67 @@
     transform:translateY(-5px);
 
     box-shadow:0 0 25px rgba(255,42,42,.5);
+}
+/* ==========================
+   MOBILE
+========================== */
+
+@media (max-width:768px){
+
+    .offline-page{
+
+        padding:20px;
+
+    }
+
+    .offline-card{
+
+        width:100%;
+
+        max-width:100%;
+
+        padding:35px 25px;
+
+        border-radius:20px;
+
+    }
+
+    .offline-icon{
+
+        font-size:55px;
+
+        margin-bottom:15px;
+
+    }
+
+    .offline-card h1{
+
+        font-size:1.8rem;
+
+        margin-bottom:12px;
+
+    }
+
+    .offline-card p{
+
+        font-size:15px;
+
+        line-height:1.6;
+
+        margin-bottom:25px;
+
+    }
+
+    .offline-card button{
+
+        width:100%;
+
+        padding:14px;
+
+        font-size:15px;
+
+        border-radius:40px;
+
+    }
+
 }
