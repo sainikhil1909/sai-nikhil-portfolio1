@@ -52,7 +52,7 @@ function About() {
                          <div className="id-card">
 
                               <img
-                                   src=".\src\assets\avatar.png"
+                                   src=".\avatar.png"
                                    alt="Sai Nikhil"
                               />
 
