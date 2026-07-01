@@ -24,8 +24,8 @@ function HomePage() {
 
   return (
     <>
+     <Navbar />
       <main>
-      <Navbar />
       <Hero />
       <About />
       <Skills />
