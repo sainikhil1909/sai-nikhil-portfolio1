@@ -74,62 +74,62 @@ function App() {
 
   }, []);
 
-  // useEffect(() => {
+  useEffect(() => {
 
-  //   // Disable Right Click
-  //   const disableRightClick = (e) => {
-  //     e.preventDefault();
-  //   };
+    // Disable Right Click
+    const disableRightClick = (e) => {
+      e.preventDefault();
+    };
 
-  //   // Disable F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U
-  //   const disableKeys = (e) => {
+    // Disable F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U
+    const disableKeys = (e) => {
 
-  //     if (
-  //       e.key === "F12" ||
+      if (
+        e.key === "F12" ||
 
-  //       (e.ctrlKey &&
-  //         e.shiftKey &&
-  //         e.key.toLowerCase() === "i") ||
+        (e.ctrlKey &&
+          e.shiftKey &&
+          e.key.toLowerCase() === "i") ||
 
-  //       (e.ctrlKey &&
-  //         e.shiftKey &&
-  //         e.key.toLowerCase() === "j") ||
+        (e.ctrlKey &&
+          e.shiftKey &&
+          e.key.toLowerCase() === "j") ||
 
-  //       (e.ctrlKey &&
-  //         e.key.toLowerCase() === "u")
-  //     ) {
+        (e.ctrlKey &&
+          e.key.toLowerCase() === "u")
+      ) {
 
-  //       e.preventDefault();
+        e.preventDefault();
 
-  //       return false;
-  //     }
-  //   };
+        return false;
+      }
+    };
 
-  //   document.addEventListener(
-  //     "contextmenu",
-  //     disableRightClick
-  //   );
+    document.addEventListener(
+      "contextmenu",
+      disableRightClick
+    );
 
-  //   document.addEventListener(
-  //     "keydown",
-  //     disableKeys
-  //   );
+    document.addEventListener(
+      "keydown",
+      disableKeys
+    );
 
-  //   return () => {
+    return () => {
 
-  //     document.removeEventListener(
-  //       "contextmenu",
-  //       disableRightClick
-  //     );
+      document.removeEventListener(
+        "contextmenu",
+        disableRightClick
+      );
 
-  //     document.removeEventListener(
-  //       "keydown",
-  //       disableKeys
-  //     );
+      document.removeEventListener(
+        "keydown",
+        disableKeys
+      );
 
-  //   };
+    };
 
-  // }, []);
+  }, []);
 
   if (loading) {
 
