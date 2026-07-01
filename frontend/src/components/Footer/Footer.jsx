@@ -78,9 +78,10 @@ function Footer() {
 
             <h3>Contact</h3>
             
-            <div className="footer-contact-item">
+            <div className="footer-contact-item" aria-label="Send email to Sai Nikhil"
+  title="Email">
 
-              <FaEnvelope aria-label="Email Id"/>
+              <FaEnvelope aria-hidden="true"/>
 
               <span>
                 pallasainikhil19@gmail.com
@@ -88,9 +89,10 @@ function Footer() {
 
             </div>
 
-            <div className="footer-contact-item">
+            <div className="footer-contact-item" aria-label="Call Sai Nikhil"
+  title="Phone">
 
-              <FaPhoneAlt aria-label="Phone Number" />
+              <FaPhoneAlt aria-hidden="true" />
 
               <span>
                 +91 91546 38079
@@ -137,12 +139,14 @@ function Footer() {
 
               <a
                 href="mailto:pallasainikhil19@gmail.com"
+                aria-label="Send email to Sai Nikhil"
+                title="Email"
               >
-                <FaEnvelope />
+                <FaEnvelope aria-hidden="true" />
               </a>
 
-              <a href="tel:+919154638079">
-                <FaPhoneAlt />
+              <a href="tel:+919154638079" aria-label="Call Sai Nikhil" title="Phone">
+                <FaPhoneAlt aria-hidden="true" />
               </a>
 
             </div>

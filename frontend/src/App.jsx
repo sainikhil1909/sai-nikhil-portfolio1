@@ -24,6 +24,7 @@ function HomePage() {
 
   return (
     <>
+      <main>
       <Navbar />
       <Hero />
       <About />
@@ -33,6 +34,7 @@ function HomePage() {
       {/* <Research /> */}
       <Resume />
       <Contact />
+      </main>
       <Footer />
       <ChatBot />
     </>
@@ -144,18 +146,6 @@ function App() {
   if (!online) {
 
     return <Offline />;
-
-  }
-
-
-
-  if (loading) {
-
-    return (
-      <Preloader
-        onDone={() => setLoading(false)}
-      />
-    );
 
   }
 

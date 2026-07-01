@@ -176,12 +176,14 @@ function Contact() {
 
           <div className="social-links">
 
-            <a href="https://github.com/sainikhil1909" target="_blank" rel="noreferrer">
-              <FaGithub />
+            <a href="https://github.com/sainikhil1909" target="_blank" rel="noreferrer" aria-label="GitHub Profile"
+  title="GitHub Profile">
+              <FaGithub  aria-hidden="true" />
             </a>
 
-            <a href="https://www.linkedin.com/in/sai-nikhil-palla-19042003p/" target="_blank" rel="noreferrer">
-              <FaLinkedin />
+            <a href="https://www.linkedin.com/in/sai-nikhil-palla-19042003p/" target="_blank" rel="noreferrer" aria-label="LinkedIn Profile"
+  title="LinkedIn Profile">
+              <FaLinkedin  aria-hidden="true" />
             </a>
 
           </div>
