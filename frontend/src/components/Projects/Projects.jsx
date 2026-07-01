@@ -124,11 +124,11 @@ function Projects() {
 
             <div className="slider-controls">
 
-                <button onClick={scrollLeft}>
+                <button onClick={scrollLeft} aria-label="Previous Project">
                     <FaArrowLeft />
                 </button>
 
-                <button onClick={scrollRight}>
+                <button onClick={scrollRight} aria-label="Next Project">
                     <FaArrowRight />
                 </button>
 
@@ -210,6 +210,7 @@ function Projects() {
                                     href={project.github}
                                     target="_blank"
                                     rel="noreferrer"
+                                    aria-label="GitHub Profile"
                                 >
 
                                     <FaGithub />

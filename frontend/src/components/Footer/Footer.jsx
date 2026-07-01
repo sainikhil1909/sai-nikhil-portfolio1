@@ -80,7 +80,7 @@ function Footer() {
             
             <div className="footer-contact-item">
 
-              <FaEnvelope />
+              <FaEnvelope aria-label="Email Id"/>
 
               <span>
                 pallasainikhil19@gmail.com
@@ -90,7 +90,7 @@ function Footer() {
 
             <div className="footer-contact-item">
 
-              <FaPhoneAlt />
+              <FaPhoneAlt aria-label="Phone Number" />
 
               <span>
                 +91 91546 38079
@@ -121,6 +121,7 @@ function Footer() {
                 href="https://github.com/sainikhil1909"
                 target="_blank"
                 rel="noreferrer"
+                aria-label="GitHub Profile"
               >
                 <FaGithub />
               </a>
@@ -129,6 +130,7 @@ function Footer() {
                 href="https://www.linkedin.com/in/sai-nikhil-palla-19042003p/"
                 target="_blank"
                 rel="noreferrer"
+                aria-label="LinkedIn Profile"
               >
                 <FaLinkedin />
               </a>

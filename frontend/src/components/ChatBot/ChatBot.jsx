@@ -585,6 +585,7 @@ return (
     <button
         className="chat-toggle"
         onClick={toggleChat}
+        aria-label="Open Chatbot"
     >
         {
             open

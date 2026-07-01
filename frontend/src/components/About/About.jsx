@@ -131,13 +131,13 @@ function About() {
 
                          <div className="tech-icons">
 
-                              <FaReact />
+                              <FaReact aria-label="React.js"/>
 
-                              <FaNodeJs />
+                              <FaNodeJs aria-label="Node.js"/>
 
-                              <SiMongodb />
+                              <SiMongodb aria-label="MongoDB"/>
 
-                              <FaPython />
+                              <FaPython aria-label="Python"/>
 
                          </div>
 
