@@ -172,6 +172,7 @@ function Projects() {
                             <img
                                 src={project.image}
                                 alt={project.title}
+                                loading="lazy"
                             />
 
                             <div className="image-watermark">
