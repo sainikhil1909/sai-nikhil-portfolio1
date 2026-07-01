@@ -69,6 +69,8 @@ function Hero() {
           <div className="image-wrapper">
 
             <img
+              rel="preload"
+              as="image"
               src=".\hero-bg.jpg"
               alt="Sai Nikhil"
             />
